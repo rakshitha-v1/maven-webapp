@@ -1,0 +1,7 @@
+- hosts: localhost
+  become: yes
+  tasks:
+    - name: Copy WAR file to Tomcat webapps directory
+      copy:
+        src: target/maven-webapp.war
+        dest: /opt/tomcat/webapps/maven-webapp.war
